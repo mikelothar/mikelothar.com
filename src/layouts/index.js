@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
-import 'bootstrap/dist/css/bootstrap.css'
-// import './index.css'
+import './bootstrap.scss'
+// import './index.scss'
+
 
 const TemplateWrapper = ({ children }) => (
   <div>
