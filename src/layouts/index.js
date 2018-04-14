@@ -12,7 +12,6 @@ const TemplateWrapper = ({ children }) => (
     <Helmet>
       <title>Mike Lothar</title>
       <link rel="canonical" href="https://mikelothar.com" />
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
     </Helmet>
     <Header />
     <div
