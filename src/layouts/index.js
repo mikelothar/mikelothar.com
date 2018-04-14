@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import Header from '../components/Header'
 import './bootstrap.scss'
 import './index.scss'
@@ -11,9 +10,9 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
       <title>Mike Lothar</title>
-      <link rel="canonical" href="https://mikelothar.com" />
+      <link rel="canonical" href="https://mikelothar.com"/>
     </Helmet>
-    <Header />
+    <Header/>
     <div
       style={{
         margin: '0 auto',
