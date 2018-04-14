@@ -28,13 +28,13 @@ const SiteHeader = styled.nav`
 `;
 
 const Header = () => (
-  <SiteHeader className="site-header sticky-top py-1">
+  <SiteHeader className="sticky-top py-1">
     <div className="container d-flex flex-column flex-md-row justify-content-between">
       <Link to="/" className="py-2">
         <img src={logo} alt="" />
       </Link>
-      <Link to="/" className="py-2 d-none d-md-inline-block active">Development</Link>
-      <Link className="py-2 d-none d-md-inline-block" href="#">Graphics</Link>
+      <Link to="/development" className="py-2 d-none d-md-inline-block active">Development</Link>
+      <Link to="/graphics" className="py-2 d-none d-md-inline-block" href="#">Graphics</Link>
       <a className="py-2 d-none d-md-inline-block" href="#">Layouts</a>
       <a className="py-2 d-none d-md-inline-block" href="#">Games</a>
       <a className="py-2 d-none d-md-inline-block" href="#">About</a>
