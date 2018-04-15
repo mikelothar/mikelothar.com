@@ -1,25 +1,33 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from "styled-components"
+import styled from 'styled-components'
 import logo from '../../../assets/mikelothar-logo.svg'
 
 const SiteHeader = styled.nav`
+  text-transform: uppercase;
   background-color: #272828;
   backdrop-filter: saturate(180%) blur(20px);
   
   & .container {
     max-width: 960px;
+    align-items: center;
   }
   
   & a {
-    color: #999;  
-    transition: ease-in-out color 0.15s;
+    color: #919191;  
+    transition: ease-in-out color .15s;
+    border-right: 1px solid #373737;
     
     &.active,
     &:hover {
-      color: #fff;
+      color: #FFF9EB;
       text-decoration: none;
     }
+  }
+    
+  .px-4 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
   }
   
   img {
@@ -28,18 +36,20 @@ const SiteHeader = styled.nav`
 `;
 
 const Header = () => (
-  <SiteHeader className="sticky-top py-1">
-    <div className="container d-flex flex-column flex-md-row justify-content-between">
-      <Link to="/" className="py-2">
-        <img src={logo} alt="" />
-      </Link>
-      <Link to="/development" className="py-2 d-none d-md-inline-block active">Development</Link>
-      <Link to="/graphics" className="py-2 d-none d-md-inline-block" href="#">Graphics</Link>
-      <a className="py-2 d-none d-md-inline-block" href="#">Layouts</a>
-      <a className="py-2 d-none d-md-inline-block" href="#">Games</a>
-      <a className="py-2 d-none d-md-inline-block" href="#">About</a>
+  <SiteHeader className="">
+    <div className="container">
+      <img src={logo} alt=""/>
+      <Link exact to="/"
+            activeClassName='active'
+            className="">Home</Link>
+      <Link to="/development"
+            activeClassName='active'
+            className="">Development</Link>
+      <Link to="/graphics"
+            activeClassName='active'
+            className="" href="#">Graphics</Link>
     </div>
   </SiteHeader>
-)
+);
 
 export default Header
