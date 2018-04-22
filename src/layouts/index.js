@@ -2,18 +2,39 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
-import styled from 'styled-components'
+import styled, {injectGlobal} from 'styled-components'
 import 'typeface-montserrat'
+import bg from '../../assets/mikelothar.com.png'
+
+injectGlobal`
+  * {
+    box-sizing: border-box;
+  }
+    
+  body {
+    margin: 625px 0;
+    background-color: #272828;
+    background: top center url(${bg}) no-repeat;
+    background-size: 1560px;
+  }
+`;
 
 const Wrapper = styled.div`
-  // general styles
+  display: grid;
+  grid-template: auto 1fr minmax(1rem, auto) auto / 100%;
+	min-height: 100vh;
+	//min-height: 1000px;
   font-family: 'Montserrat';
   font-weight: 300;
-  background: #272828;
-  
-  .container {
-    margin: 0 auto;
-    max-width: 800px;
+  // background: #272828;
+  width: 1400px;
+  margin: 0 auto;
+	
+	.main {
+    order: 2;
+    padding: 1rem;
+    background-color: #fff;
+    //display: none;
   }
 `;
 
@@ -25,13 +46,7 @@ const TemplateWrapper = ({ children }) => (
       <link rel="canonical" href="https://mikelothar.com"/>
     </Helmet>
     <Header/>
-    <div
-      className="container"
-      style={{
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className="main">
       {children()}
     </div>
   </Wrapper>
