@@ -4,79 +4,42 @@ import styled from 'styled-components'
 import logo from '../../../assets/mikelothar-logo.svg'
 
 const SiteHeader = styled.nav`
-  order: 1;
-  width: 1200px;
-  margin: 0 auto;
   font-size: 14px;
-  
-	@media (min-width: 40rem) {
-		grid-column: span 8;
-	}
-	
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 0;
-  
-  @media (min-width: 40rem) {
-    flex-direction: row;
-    position: fixed;
-    height: 5rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  }
-	
-  text-transform: uppercase;
-  //background-color: #272828;
-  //background-color: #2c2c2c;
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: saturate(180%) blur(20px);
-  //border: 1px solid red;
-      
+
+  a {
+    color: #fff;
+    transition: ease-in-out color 0.15s;
+  }
+  
+  a:hover,
+  a.active {
+    color: #aaa;
+    text-decoration: none;
+  }
+
   img {
-    height: 50px;
+    margin-top: .25rem;
+    height: 28px;
   }
 `;
 
 const StyledLink = styled(Link)`
-  color: #919191;  
-  transition: ease-in-out all .2s;
-  margin-left: 50px;
-  text-decoration: none;
-  padding: 10px 10px 0;
-  border-bottom: 10px solid transparent;
-  border-top: 3px solid transparent;
-  
-  &.active,
-  &:hover {
-    color: #FFF9EB;
-  }
-  
-  &.active {
-    position: relative;
-    top: 5px;
-    border-top: 12px solid transparent;
-    border-bottom: 3px solid #C6A64E;
-    padding: 0px 10px 10px;
-    transform: translateY(-5px);
-  }
-  
-  &:after {
-    content: "";
-    position: relative;
-    border-right: 1px solid #373737;;
-    left: 35px;
-    padding: 10px 0;
-  }
+
 `;
 
 const Header = () => (
-  <SiteHeader>
-    <img src={logo} alt=""/>
-    <StyledLink exact to="/" activeClassName="active">Home</StyledLink>
-    <StyledLink to="/development" activeClassName="active">Development</StyledLink>
-    <StyledLink to="/graphics" activeClassName="active">Graphics</StyledLink>
+  <SiteHeader className="site-header sticky-top py-1">
+    <div className="container d-flex flex-column flex-md-row">
+      <Link exact to="/" className="d-md-inline-block">
+        <img src={logo} alt="Mike Lothar"/>
+      </Link>
+      <StyledLink to="/development" activeClassName="active"
+                  className="py-2 ml-5 d-none d-md-inline-block">Development</StyledLink>
+      <StyledLink to="/graphics" activeClassName="active"
+                  className="py-2 ml-5 d-none d-md-inline-block">Graphics</StyledLink>
+    </div>
   </SiteHeader>
 );
 
