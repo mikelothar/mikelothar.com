@@ -2,18 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
-import styled, {injectGlobal} from 'styled-components'
-import 'typeface-montserrat'
-import 'bootstrap/dist/css/bootstrap.css'
+import 'prismjs'
+import 'prismjs/themes/prism-okaidia.css'
 
-injectGlobal`
-  .container {
-    max-width: 960px;
-  }
-`;
+import './global-styles'
+import 'bootstrap/dist/css/bootstrap.css'
+import styled from 'styled-components'
+
+import './index.scss'
+
+// import 'typeface-montserrat'
 
 const Wrapper = styled.div`
-
 `;
 
 
@@ -24,7 +24,7 @@ const TemplateWrapper = ({ children }) => (
       <link rel="canonical" href="https://mikelothar.com"/>
     </Helmet>
     <Header/>
-    <div className="main">
+    <div className="container">
       {children()}
     </div>
   </Wrapper>
