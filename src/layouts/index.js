@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
+import 'bootstrap/dist/css/bootstrap.css'
 import 'prismjs'
 import 'prismjs/themes/prism-okaidia.css'
 
 import './global-styles'
-import 'bootstrap/dist/css/bootstrap.css'
 import styled from 'styled-components'
 
 import './index.scss'
