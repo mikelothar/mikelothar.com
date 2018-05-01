@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from '../components/Header'
-import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap/dist/css/bootstrap.css'
 import 'prismjs'
 import 'prismjs/themes/prism-okaidia.css'
 
@@ -23,7 +23,7 @@ const TemplateWrapper = ({ children }) => (
       <title>Mike Lothar</title>
       <link rel="canonical" href="https://mikelothar.com"/>
     </Helmet>
-    <Header/>
+    {/* <Header/> */}
     <div className="container">
       {children()}
     </div>

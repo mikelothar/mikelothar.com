@@ -1,6 +1,9 @@
 import {injectGlobal} from 'styled-components'
 
 injectGlobal`
+
+* {box-sizing: border-box;}
+
   body {
     margin: 0;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
@@ -13,7 +16,8 @@ injectGlobal`
   }
 
   .container {
-    max-width: 800px;
+    max-width: 70rem;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 `;
