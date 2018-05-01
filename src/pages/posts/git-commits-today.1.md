@@ -1,18 +1,16 @@
 ---
-path: "/development/use-git-commits-as-work-log"
+path: "/development/test"
 date: "2017-12-21"
-title: "Use Git commits as work log"
-subtitle: "Finding out exactly what it is you did"
+title: "Force Jacket:"
+subtitle: "Pneumatically-Actuated Jacket for Embodied Haptic Experiences"
 ---
 
-### What you do
 This little command will show you what commits you did for the last 5 days. Good for many things, like when you need to register time on what code you've been working on.
 
 ```bash
 git log --committer="your name" --since="5 days ago" --no-merges --pretty=format:"%<(20) %ar %s"
 ```
 
-### What you get
 Outputs the following:
 
 ```bash
