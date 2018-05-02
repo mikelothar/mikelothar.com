@@ -45,6 +45,7 @@ const Header = () => (
       {/*<Link exact to="/">*/}
       {/*<img src={logo} alt="Mike Lothar"/>*/}
       {/*</Link>*/}
+      <StyledLink exact to="/" activeClassName="active">Home</StyledLink>
       <StyledLink to="/development" activeClassName="active">Development</StyledLink>
       <StyledLink to="/graphics" activeClassName="active">Graphics</StyledLink>
     </div>
