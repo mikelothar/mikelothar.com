@@ -15,12 +15,17 @@ body {
   line-height: 1.6;
 }
 
+.blog-post-container {
+  margin: 6rem 0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  margin-top: 0;
   margin-bottom: .5rem;
   font-family: inherit;
   font-weight: 500;
@@ -29,7 +34,6 @@ h6 {
 }
 
 h1 {
-  margin-top: 6rem;
   font-size: 4.5rem;
   font-weight: 300;
   color: white;
@@ -52,10 +56,20 @@ pre {
   background-color: black !important;
   padding: 1rem 1.5rem !important;
   overflow: auto;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+code {
+  font-size: 87.5%;
+  color: #3498db;
+  word-break: break-word;
 }
 
 p {
   color: rgba($color: white, $alpha: .87);
   font-weight: 300;
   max-width: 55rem;
+  //margin-top: 1.5rem;
+  //margin-bottom: 1rem;
 }

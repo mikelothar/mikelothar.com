@@ -4,7 +4,8 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import 'prismjs'
 import 'prismjs/themes/prism-okaidia.css'
-import 'bootstrap/dist/css/bootstrap.css'
+import './smart-grid.scss'
+// import 'bootstrap/dist/css/bootstrap.css'
 
 import './global-styles'
 import styled from 'styled-components'
@@ -24,7 +25,7 @@ const TemplateWrapper = ({ children }) => (
       <link rel="canonical" href="https://mikelothar.com"/>
     </Helmet>
     <Header/>
-    <div className="container">
+    <div className="main">
       {children()}
     </div>
   </Wrapper>
