@@ -23,8 +23,8 @@ const SiteHeader = styled.nav`
   }
 
   img {
-    margin-top: 1.1rem;
-    height: 28.125px;
+    margin-top: 0.6rem;
+    height: 45px;
   }
 `
 
