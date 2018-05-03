@@ -14,6 +14,7 @@ import './index.scss'
 
 import 'typeface-crimson-text'
 import 'typeface-montserrat'
+import favicon from '../../assets/favicon.ico'
 
 const Wrapper = styled.div`
 `;
@@ -24,6 +25,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet>
       <title>Mike Lothar</title>
       <link rel="canonical" href="https://mikelothar.com"/>
+      <link rel="shortcut icon" href={favicon} type="image/x-icon" />
     </Helmet>
     <Header/>
     <div className="main">
