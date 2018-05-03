@@ -1,8 +1,8 @@
 ---
 path: "/development/use-git-commits-as-work-log"
 date: "2017-12-21"
-title: "Use Git commits as work log"
-subtitle: "Finding out exactly what it is you did"
+title: "USe Git commits as work log"
+subtitle: "An easy way to see what you did <del>last summer</del> recently"
 ---
 
 ### What you do

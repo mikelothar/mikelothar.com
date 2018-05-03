@@ -35,24 +35,6 @@ h6 {
   color: inherit;
 }
 
-h1 {
-  font-size: 4.5rem;
-  font-size: 52px;
-  letter-spacing: 15.6px;
-  text-transform: uppercase;
-  font-weight: 300;
-  color: rgba($color: black, $alpha: .75);
-  text-align: center;
-}
-
-h2 {
-  text-align: center;
-  font-weight: 300;
-  font-size: 2.4rem;
-  margin-bottom: 3rem;
-  color: rgba($color: black, $alpha: .5);
-}
-
 h3 {
   font-size: 1.8rem;
   font-weight: 600;
@@ -78,7 +60,7 @@ code {
 p {
   color: rgba($color: black, $alpha: .87);
   font-weight: 400;
-  max-width: 55rem;
+  //max-width: 55rem;
   //margin-top: 1.5rem;
   //margin-bottom: 1rem;
 }
