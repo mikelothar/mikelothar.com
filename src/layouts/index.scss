@@ -9,8 +9,9 @@ html {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
-  background-color: #1e1e1e;
-  color: rgba($color: white, $alpha: .54);
+  //background-color: #1e1e1e;
+  background-color: white;
+  color: rgba($color: black, $alpha: .87);
   font-size: 1.2rem;
   line-height: 1.6;
 }
@@ -36,7 +37,7 @@ h6 {
 h1 {
   font-size: 4.5rem;
   font-weight: 300;
-  color: white;
+  color: rgba($color: black, $alpha: .87);
 }
 
 h2 {
@@ -47,8 +48,9 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 1.5rem;
+  color: rgba($color: black, $alpha: .87);
 }
 
 pre {
@@ -67,8 +69,8 @@ code {
 }
 
 p {
-  color: rgba($color: white, $alpha: .87);
-  font-weight: 300;
+  color: rgba($color: black, $alpha: .87);
+  font-weight: 400;
   max-width: 55rem;
   //margin-top: 1.5rem;
   //margin-bottom: 1rem;
