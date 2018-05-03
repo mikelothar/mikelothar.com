@@ -46,7 +46,7 @@ const Title = ({ titles }) => (
     <div className="date">{titles.date}</div>
     <h1>{titles.title}</h1>
     {titles.subtitle ? <h2 dangerouslySetInnerHTML={{ __html: titles.subtitle }}/> : ''}
-    {titles.img ? <img src={titles.img} alt={titles.title}/> : ''}
+    {titles.img ? <img src={require('../../../assets/posts/' + titles.img) } alt={titles.title}/> : ''}
   </TitleWrapper>
 )
 
