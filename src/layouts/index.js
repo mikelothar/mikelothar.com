@@ -12,7 +12,8 @@ import styled from 'styled-components'
 
 import './index.scss'
 
-// import 'typeface-montserrat'
+import 'typeface-crimson-text'
+import 'typeface-montserrat'
 
 const Wrapper = styled.div`
 `;

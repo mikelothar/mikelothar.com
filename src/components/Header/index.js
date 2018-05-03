@@ -10,7 +10,14 @@ const SiteHeader = styled.nav`
   position: sticky;
   top: 0;
   z-index: 1020;
-  padding: .75rem 0;
+  padding: 1.5rem 0;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+  
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
   
   .main {
   }
@@ -21,17 +28,18 @@ const SiteHeader = styled.nav`
 
   a {
     transition: ease-in-out color 0.15s, border-bottom-color 0.15s;
-    padding: .5rem .15rem;
+    padding: 1.5rem .5rem;
     text-decoration: none;
     color: rgba(0, 0, 0, .54);
+    //color: rgb(38, 62, 61);
     border-bottom: 2px solid transparent;
     margin: 0 1.5rem 0 0;
   }
   
   a:hover,
   a.active {
-    color: rgba(0, 0, 0, .87);
-    border-bottom: 2px solid black;
+    color: rgba(0, 0, 0, .75);
+    border-bottom: 4px solid rgba(0, 0, 0, .87);
   }
 
   img {
@@ -48,13 +56,13 @@ const Header = () => (
   <SiteHeader>
     <div className="main">
       <div className="twelve center">
-      {/*<Link exact to="/">*/}
-      {/*<img src={logo} alt="Mike Lothar"/>*/}
-      {/*</Link>*/}
-      <StyledLink exact to="/" activeClassName="active">Home</StyledLink>
-      <StyledLink to="/development" activeClassName="active">Development</StyledLink>
-      <StyledLink to="/graphics" activeClassName="active">Graphics</StyledLink>
-    </div>
+        {/*<Link exact to="/">*/}
+        {/*<img src={logo} alt="Mike Lothar"/>*/}
+        {/*</Link>*/}
+        <StyledLink exact to="/" activeClassName="active">Home</StyledLink>
+        <StyledLink to="/development" activeClassName="active">Development</StyledLink>
+        <StyledLink to="/graphics" activeClassName="active">Graphics</StyledLink>
+      </div>
     </div>
   </SiteHeader>
 )
