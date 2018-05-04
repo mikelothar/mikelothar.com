@@ -4,6 +4,7 @@ date: "2017-12-21"
 title: "Use Git commits as work log"
 subtitle: "An easy way to see what you did <del>last summer</del> recently"
 img: "use-git-commits-as-work-log/snowy-mountains.jpg"
+color: "#c0392b"
 ---
 
 ### What you do

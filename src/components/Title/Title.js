@@ -12,9 +12,9 @@ const TitleWrapper = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.5);
     font-weight: 700;
     margin-bottom: 1rem;
+    color: var(--theme-color);
   }
 
   h1 {
@@ -22,7 +22,7 @@ const TitleWrapper = styled.div`
     letter-spacing: 0.9rem;
     text-transform: uppercase;
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(0, 0, 0, 1);
     text-align: center;
     max-width: 50rem;
   }
@@ -32,8 +32,8 @@ const TitleWrapper = styled.div`
     font-weight: 300;
     font-size: 2.4rem;
     margin-bottom: 3rem;
-    color: rgba(0, 0, 0, 0.5);
     max-width: 50rem;
+    color: var(--theme-color);
   }
   
   img {
@@ -46,7 +46,12 @@ const Title = ({ titles }) => (
     <div className="date">{titles.date}</div>
     <h1>{titles.title}</h1>
     {titles.subtitle ? <h2 dangerouslySetInnerHTML={{ __html: titles.subtitle }}/> : ''}
-    {titles.img ? <img src={require('../../../assets/posts/' + titles.img) } alt={titles.title}/> : ''}
+    {titles.img ? <img src={require('../../../assets/posts/' + titles.img)} alt={titles.title}/> : ''}
+    {titles.color ? <style dangerouslySetInnerHTML={{
+      __html: `
+      body { --theme-color: ${titles.color} }
+    `
+    }}/> : ''}
   </TitleWrapper>
 )
 

@@ -32,7 +32,7 @@ const StyledLink = styled(Link)`
     transition: ease-in-out color 0.15s, border-bottom-color 0.15s;
     padding: 1.5rem .5rem;
     text-decoration: none;
-    color: rgba(0, 0, 0, .54);
+    color: var(--theme-color);
     border-bottom: 2px solid transparent;
     margin: 0 1.5rem 0 0;
     
@@ -42,7 +42,7 @@ const StyledLink = styled(Link)`
     
     &:hover,
     &.active {
-      color: rgba(0, 0, 0, .75);
+      color: rgba(0, 0, 0, 1);
       border-bottom: 4px solid rgba(0, 0, 0, .87);
     }
 `
