@@ -2,43 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TitleWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 1rem;
-
-  > div.date {
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--theme-color);
-  }
-
-  h1 {
-    font-size: 3.5rem;
-    letter-spacing: 0.9rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 1);
-    text-align: center;
-    max-width: 50rem;
-  }
-  
-  h2 {
-    text-align: center;
-    font-weight: 300;
-    font-size: 2.4rem;
-    margin-bottom: 3rem;
-    max-width: 50rem;
-    color: var(--theme-color);
-  }
-  
-  img {
-    max-width: 100%;
-  }
 `
 
 const Title = ({ titles }) => (
