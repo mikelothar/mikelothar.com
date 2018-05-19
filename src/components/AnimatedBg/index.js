@@ -22,8 +22,6 @@ const Bg = styled.div `
   : require('../../../assets/animated-bg/cat-typing.gif')});
 `
 
-const AnimatedBg = ({
-  bg = 'blue'
-}) => (<Bg bg={bg}/>)
+const AnimatedBg = ({bg}) => (<Bg bg={bg}/>)
 
 export default AnimatedBg

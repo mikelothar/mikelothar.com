@@ -9,11 +9,15 @@ export default function Template({
   const {markdownRemark} = data // data.markdownRemark holds our post data
   const {frontmatter, html} = markdownRemark
   return (
-    <div className="has-background-dark">
-      <section className="hero is-dark is-large animated-bg-parent">
-        <AnimatedBg bg={frontmatter.bg} />
-        <div className="bg-fixedXXX"/>
-
+    <div
+      className={frontmatter.theme
+      ? `has-background-${frontmatter.theme}`
+      : 'has-background-dark'}>
+      <section
+        className={frontmatter.theme
+        ? `hero is-large animated-bg-parent is-${frontmatter.theme}`
+        : 'hero is-large animated-bg-parent is-dark'}>
+        <AnimatedBg bg={frontmatter.bg}/>
         <Navbar/>
 
         <div className="hero-body">
@@ -63,6 +67,7 @@ export const pageQuery = graphql `
         title
         subtitle
         bg
+        theme
       }
     }
   }

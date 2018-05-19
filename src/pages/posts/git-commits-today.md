@@ -4,6 +4,7 @@ date: "2017-12-21"
 title: "Use Git commits as work log"
 subtitle: "An easy way to see what you did <del>last summer</del> recently"
 bg: "snowwhite-high5.gif"
+theme: 'danger'
 ---
 
 ### What you do
