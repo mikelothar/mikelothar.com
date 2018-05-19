@@ -1,16 +1,18 @@
 import React from 'react'
 import Title from '../components/Title/Title'
 import Navbar from '../components/Navbar'
+import AnimatedBg from '../components/AnimatedBg'
 
 export default function Template({
-                                   data, // this prop will be injected by the GraphQL query below.
-                                 }) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  data, // this prop will be injected by the GraphQL query below.
+}) {
+  const {markdownRemark} = data // data.markdownRemark holds our post data
+  const {frontmatter, html} = markdownRemark
   return (
     <div className="has-background-dark">
-      <section className="hero is-dark is-large bg-parent">
-        <div className="bg-fixed"/>
+      <section className="hero is-dark is-large animated-bg-parent">
+        <AnimatedBg bg={frontmatter.bg} />
+        <div className="bg-fixedXXX"/>
 
         <Navbar/>
 
@@ -23,8 +25,11 @@ export default function Template({
                   <p className="title">
                     {frontmatter.title}
                   </p>
-                  <p className="subtitle"
-                     dangerouslySetInnerHTML={{ __html: frontmatter.subtitle }}/>
+                  <p
+                    className="subtitle"
+                    dangerouslySetInnerHTML={{
+                    __html: frontmatter.subtitle
+                  }}/>
                 </div>
               </div>
             </div>
@@ -33,24 +38,22 @@ export default function Template({
 
       </section>
 
-
       <div className="container">
         <div className="section">
 
-
           <div
             className="content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+            dangerouslySetInnerHTML={{
+            __html: html
+          }}/>
         </div>
       </div>
-
 
     </div>
   )
 }
 
-export const pageQuery = graphql`
+export const pageQuery = graphql `
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
@@ -59,7 +62,7 @@ export const pageQuery = graphql`
         path
         title
         subtitle
-        img
+        bg
       }
     }
   }
